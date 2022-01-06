@@ -30,14 +30,19 @@ public class Sorts {
     {
       int bubblecount=0;
       for (int i = 0; i < data.size() - 1; i ++) {
+        int swaps = 0;
           for (int j = data.size() - 1; j > i; j --) {
               Comparable leftVal = data.get(j - 1);
               Comparable rightVal = data.get(j);
               bubblecount++;
               if (leftVal.compareTo(rightVal) > 0) {
+                  swaps += 1;
                   data.set(j, leftVal);
                   data.set(j - 1, rightVal);
               }
+          }
+          if (swaps == 0) {
+            break;
           }
       }
       System.out.println("Number of comparisons: " + bubblecount);
@@ -66,7 +71,7 @@ public class Sorts {
     int maxPos;
 
     for(int pass = data.size() - 1; pass > -1; pass-- ) {
-      System.out.println( "\nbegin pass " + (data.size()-pass) );//diag
+      // System.out.println( "\nbegin pass " + (data.size()-pass) );//diag
       maxPos = pass;
 
       for(int i = 0; i < pass; i++  ) {
@@ -80,13 +85,13 @@ public class Sorts {
 
       Comparable p3 = data.get(maxPos);
       Comparable p4 = data.get(pass);
-      System.out.println( "maxPos: " + maxPos );//diag
-      System.out.println( data );//diag
+      // System.out.println( "maxPos: " + maxPos );//diag
+      // System.out.println( data );//diag
       data.set(pass, p3);
       data.set(maxPos, p4);
 
 
-      System.out.println( "after swap: " +  data );//diag
+      // System.out.println( "after swap: " +  data );//diag
       }
     System.out.println("Number of comparisons: " + selectcount);
 
@@ -119,8 +124,8 @@ public class Sorts {
     for(int partition=1; partition<data.size(); partition++  ) {
       //partition marks first item in unsorted region
 
-      System.out.println( "\npartition: " + partition + "\tdataset:"); //diag
-      System.out.println( data );
+      // System.out.println( "\npartition: " + partition + "\tdataset:"); //diag
+      // System.out.println( data );
 
       //traverse sorted region from right to left
       for(int i=partition; i>0; i--) {
@@ -133,7 +138,7 @@ public class Sorts {
         if (p2.compareTo(p1)>0  ) {
 
 
-          System.out.println( "swap indices "+(i-1)+" & "+i+"..." ); //diag
+          // System.out.println( "swap indices "+(i-1)+" & "+i+"..." ); //diag
           data.set(i,p2);
           data.set(i-1,p1);
         }
