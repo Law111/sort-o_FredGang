@@ -2,6 +2,7 @@
 APCS L04: sort-o-matic
 ## FredGang
 #### Joseph Othman, Lawrence Joa, Michael Kamela
+#### SotW: Aria Math
 
 Note: we decided to look at number of comparisons performed by each method, as opposed to number of swaps or number of passes.
 ## BubbleSort
