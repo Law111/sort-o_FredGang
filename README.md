@@ -36,5 +36,3 @@ Note: we decided to look at number of comparisons performed by each method, as o
   - Reason: no matter what, in order to locate the minimum element of the "rest of the array" (as in, on pass k, the subarray starting from element with index k-1), we must perform n(n-1)/2 comparisons in total to locate the minimum each time, giving O(n^2) time. However, this is still the best case because we need not perform any swaps.
 - Worst case of time complexity: O(n^2)
   - Reason: the worst case arrangement requires n(n-1)/2 comparisons, but it also compares n swaps. This does not contribute to the big O time, but does still constitute a worst case.
-
-## DATA
