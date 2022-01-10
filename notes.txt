@@ -1,1 +1,15 @@
+Big O Notation Notes
 
+    Note that for a linear search of an array (or ArrayList) of length n, we were able to find an element (or say it didn't exist) in at most n comparisons.
+    For binary search, this came out to [log_2(n)] (where I use [x] to represent the ceiling of x). Recall that this relies on the array being sorted.
+    To formalize these, we say that processes such as linear search run in O(n) time (normally, we use the worst case scenario in order to show that these methods will run at-worst in this time), which is to say that the number of comparisons necessary for linear search is linearly dependent on the size of the array.
+    We similarly say that binary search is O(log_2(n)).
+    Common big O runtimes:
+        O(1) (constant)
+        O(log(n)) (logarithmic)
+        O(n) (linear)
+        O(nlog(n)) (loglinear)
+        O(n^2) (quadratic)
+    The smaller the bounding function is (i.e. the slower it grows), the more efficient the algorithm is.
+    Note: we normally remove the constants from the bounding function (the function within the O). So, O(5n) = 5 and O(1) = 1.
+    Note: we only care about the "dominating" or "governing" term in the bounding function. So, O(42n+5) = O(n) and O(3n^2 + 8n + 6) = O(n^2).
