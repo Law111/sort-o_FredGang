@@ -16,9 +16,9 @@ Note: we decided to look at number of comparisons performed by each method, as o
 - Worst case of time complexity: O(n^2)
   - Reason: When the elements are in descending order, we must perform n-1 passes, n(n-1)/2 comparisons, and n(n-1)/2 swaps. Summing these gives O(n^2) time.   
 
---Extra Note--
-We used "Exit-Early Bubblesort" instead of "Vanilla Bubblesort"
---------------
+# Extra Note
+- We used "Exit-Early Bubblesort" instead of "Vanilla Bubblesort"
+
 
 ## InsertionSort
 - Best case scenario of arrangements: when the data is already sorted.
